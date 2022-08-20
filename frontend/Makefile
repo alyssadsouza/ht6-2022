@@ -11,7 +11,7 @@ help:
 build:
 	@echo 'Removing prior build...' 
 	@rm -rf dist/*
-	@rm -f latestBuild.zip
+	# @rm -f latestBuild.zip
 	@echo 'Prior build removed!' 
 	@echo 'Preparing new extension build..' 
 	@export INLINE_RUNTIME_CHUNK=false; \
@@ -22,7 +22,7 @@ build:
 	@echo 'Renaming files...' 
 	@mv dist/index.html dist/popup.html
 	@echo 'Zipping up build files for upload...'
-	@zip -r -X latestBuild.zip dist/*
+	# @zip -r -X latestBuild.zip dist/*
 	@echo 'New extension build ready for upload!' 
 	@exit 0
 

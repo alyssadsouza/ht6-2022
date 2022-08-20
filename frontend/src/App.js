@@ -1,7 +1,7 @@
 /*global chrome*/
 import { MemoryRouter, Routes, Route } from "react-router-dom";
 import Layout from './views/Layout';
-import Summarize from './views/Summarize';
+import Summarize from './views/Summarize/Summarize';
 import Whitelist from './views/Whitelist';
 import Blacklist from './views/Blacklist';
 import './App.css';
