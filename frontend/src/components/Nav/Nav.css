@@ -1,6 +1,7 @@
 .navbar {
     background: linear-gradient(90deg, var(--accent1) 0%, var(--accent2) 100%);
     border-radius: 20px;
+    height: 40px;
   }
   
   .navbar ul {

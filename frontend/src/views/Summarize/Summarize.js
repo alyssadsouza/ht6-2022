@@ -7,7 +7,7 @@ import './Summarize.css';
 
 function Summarize() {
   const websiteData = {
-    url: "facebook",
+    url: "",
     privacy: {
       url: "",
       summary: ["text", "privacy"]

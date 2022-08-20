@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './TermsAndConditions.css';
+import "./TermsAndConditions.css";
 
 function TermsAndConditions({ content }) {
   const [open, setOpen] = useState(false);
@@ -10,8 +10,8 @@ function TermsAndConditions({ content }) {
           There doesn't seem to be any Terms of Service on this website...
         </h3>
       ) : (
-        <>
-          <div className="flex-row">
+        <div className="terms flex-col">
+          <div className="terms-container flex-row">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="icon"
@@ -35,9 +35,9 @@ function TermsAndConditions({ content }) {
                 />
               )}
             </svg>
-            <h2>
+            <h3>
               By using this company's services, you agree to the following...
-            </h2>
+            </h3>
           </div>
           {open && (
             <div>
@@ -50,7 +50,7 @@ function TermsAndConditions({ content }) {
             Read more details in their{" "}
             <a href={content?.url}>Terms of Service</a>.
           </p>
-        </>
+        </div>
       )}
     </div>
   );

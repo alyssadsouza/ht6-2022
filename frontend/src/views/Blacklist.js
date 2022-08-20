@@ -1,5 +1,9 @@
 function Blacklist() {
-  return <div className="Blacklist">blacklist</div>;
+  return <div className="Blacklist">wlacklist</div>;
 }
+
+// function Blacklist() {
+//   return <di
+// }
 
 export default Blacklist;
