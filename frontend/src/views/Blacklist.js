@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './List.css';
 
 function Blacklist() {
@@ -29,6 +30,11 @@ function Blacklist() {
 </div>
 </div>
       </div>
+    </div>
+    <div className="List login">
+      <Link to="/login">
+    <b>Login</b>
+    </Link>
     </div>
     </div>
   );
