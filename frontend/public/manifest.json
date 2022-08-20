@@ -1,19 +1,19 @@
 {
   "manifest_version": 3,
-  "name": "React Chrome Extension",
+  "name": "Terms and Procrastination",
   "version": "0.1",
-  "description": "Boilerplate manifest for React based Chrome Extension using Google's Manifest v3",
+  "description": "A legal policy parser and summarizer for all you folks who can't be bothered to read them!",
   "background": {
     "service_worker": "./background.js"
   },
   "permissions": [],
-  "author": "Christian Sendler",
-  "homepage_url": "https://github.com/casendler/",
+  "author": "Khanna and Sons",
+  "homepage_url": "https://github.com/alyssadsouza/ht6-2022",
 
-  "short_name": "React Extension",
+  "short_name": "Terms and Procrastination",
   "action": {
-    "default_popup": "index.html",
-    "default_title": "React Chrome Extension",
+    "default_popup": "popup.html",
+    "default_title": "Terms and Procrastination",
     "default_icon": {
       "16": "/images/react-logo-16.png",
       "32": "/images/react-logo-32.png",
