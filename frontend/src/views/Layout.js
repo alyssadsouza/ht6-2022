@@ -1,8 +1,14 @@
+import { Outlet } from "react-router-dom";
 import Nav from "../components/Nav";
 
 const Layout = () => {
   return (
-    <Nav />
+    <div className="App flex-col">
+      <div className="App-content flex-col">
+        <Outlet />
+        <Nav />
+      </div>
+    </div>
   );
 };
 
