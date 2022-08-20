@@ -1,3 +1,32 @@
 .AgreePrompt {
-    margin: 0.5rem 0;
+  margin: 0.5rem 0;
+  text-align: center;
+  padding: 1rem;
+}
+
+.agree-prompt {
+  justify-content: center;
+  align-items: center;
+}
+
+
+.btn {
+    border-radius: 20px;
+    padding: 0.5rem;
+    border: none;
+    margin: 0 1rem;
+    transition: all 150ms;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: white;
+}
+
+.cancel-btn {
+    background: var(--red);
+}
+
+.agree-btn {
+    background: var(--green);
 }

@@ -1,12 +1,11 @@
 .TermsAndConditions {
     margin: 0.5rem 0;
     overflow: auto;
-    max-height: 30vh;
+    background: rgba(207, 201, 219, 0.2);
+    border-radius: 10px;
 }
 
 .terms {
-    background: rgba(207, 201, 219, 0.2);
-    border-radius: 10px;
     justify-content: stretch;
     align-items: flex-start;
     padding: 2%;

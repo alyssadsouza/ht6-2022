@@ -10,7 +10,7 @@ function Summarize() {
     url: "",
     privacy: {
       url: "",
-      summary: ["text", "privacy"]
+      summary: ["text", "privacy", "data", "data", "data"]
     },
     terms: {
       url: "",
