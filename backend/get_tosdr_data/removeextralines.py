@@ -18,4 +18,4 @@ with open('data.csv', 'r') as csv_read, open('propdata.csv', 'w', newline='') as
     spamwriter = csv.writer(csv_write, delimiter=',')
     for i, row in enumerate(spamreader):
         if row != []:
-            spamwriter.writerow(row)
+            spamwriter.writerow(row + [i])
