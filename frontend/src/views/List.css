@@ -69,11 +69,16 @@
     margin-right: 5px;
 }
 
-.removeIcon {
+.blacklistIcon {
     color: var(--bg);
     margin-right: 5px;
 }
 
-.blacklistIcon {
+.removeIcon {
     color: var(--red);
+}
+
+.whitelistIcon {
+    color: var(--green);
+    margin-right: 5px;
 }
