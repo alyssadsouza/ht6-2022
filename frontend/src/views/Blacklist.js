@@ -1,5 +1,5 @@
 function Blacklist() {
-  return <div className="Blacklist"></div>;
+  return <div className="Blacklist">blacklist</div>;
 }
 
 export default Blacklist;

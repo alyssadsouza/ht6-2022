@@ -1,23 +1,22 @@
 /*global chrome*/
-import logo from './logo.svg';
+import { MemoryRouter, Routes, Route } from "react-router-dom";
+import Layout from './views/Layout';
+import Summarize from './views/Summarize';
+import Whitelist from './views/Whitelist';
+import Blacklist from './views/Blacklist';
 import './App.css';
 
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>Woah it's a React Chrome extension...</p>
-        <a
-          className='App-link'
-          href='https://developer.chrome.com/docs/extensions/mv3/getstarted/'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          View Extension Dev Docs
-        </a>
-      </header>
-    </div>
+    <MemoryRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Summarize />} />
+          <Route path="whitelist" element={<Whitelist />} />
+          <Route path="blacklist" element={<Blacklist />} />
+        </Route>
+      </Routes>
+    </MemoryRouter>
   );
 }
 
