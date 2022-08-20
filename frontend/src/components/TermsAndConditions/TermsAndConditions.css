@@ -1,0 +1,11 @@
+.TermsAndConditions {
+    margin: 0.5rem 0;
+    overflow: auto;
+    max-height: 30vh;
+}
+
+.icon {
+    width: 4rem;
+    height: 4rem;
+    color: var(--text);
+}
