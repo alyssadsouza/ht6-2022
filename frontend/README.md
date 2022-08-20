@@ -1,5 +1,7 @@
 # Running the extension
 
+*Boilerplate code template duplicated from [https://github.com/casendler/react-chrome-extension-mv3](https://github.com/casendler/react-chrome-extension-mv3).*
+
 ## Building
 
 1. Make sure you have yarn installed (run `brew install yarn` on Mac) as well as `make` if you are on Windows.
