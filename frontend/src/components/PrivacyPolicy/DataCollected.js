@@ -1,7 +1,7 @@
-function DataCollected() {
+function DataCollected({data}) {
   return (
     <div className="DataCollected">
-      Data
+      <p>{data}</p>
     </div>
   );
 }
