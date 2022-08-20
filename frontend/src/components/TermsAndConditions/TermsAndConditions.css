@@ -4,8 +4,22 @@
     max-height: 30vh;
 }
 
+.terms {
+    background: rgba(207, 201, 219, 0.2);
+    border-radius: 10px;
+    justify-content: stretch;
+    align-items: flex-start;
+    padding: 2%;
+}
+
+.terms-container {
+    justify-content: start;
+    align-items: center;
+}
+
 .icon {
-    width: 4rem;
-    height: 4rem;
+    width: 2rem;
+    height: 2rem;
     color: var(--text);
+    margin: 0.5rem;
 }

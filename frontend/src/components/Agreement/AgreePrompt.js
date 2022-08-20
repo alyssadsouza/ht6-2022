@@ -2,13 +2,13 @@ function AgreePrompt({website, userData, setUserData}) {
   
   const blacklist = () => {
     const newData = {...userData};
-    newData?.blacklist.push(website);
+    newData?.blacklisted.push(website);
     setUserData(newData);
   };
 
   const whitelist = () => {
     const newData = {...userData};
-    newData?.whitelist.push(website);
+    newData?.whitelisted.push(website);
     setUserData(newData);
   };
 
