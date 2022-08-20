@@ -1,5 +1,5 @@
 function Summarize() {
-  return <div className="Summarize"></div>;
+  return <div className="Summarize">summarize</div>;
 }
 
 export default Summarize;
