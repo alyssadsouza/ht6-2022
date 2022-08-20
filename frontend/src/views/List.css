@@ -82,3 +82,12 @@
     color: var(--green);
     margin-right: 5px;
 }
+
+.login {
+    text-decoration: none;
+    margin-left: 40%;
+}
+
+.login b {
+    color: var(--text);
+}
