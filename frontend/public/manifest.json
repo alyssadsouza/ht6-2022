@@ -6,13 +6,18 @@
   "background": {
     "service_worker": "./background.js"
   },
-  "permissions": [],
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "scripting"
+  ],
   "author": "Khanna and Sons",
   "homepage_url": "https://github.com/alyssadsouza/ht6-2022",
 
   "short_name": "Terms and Procrastination",
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "index.html",
     "default_title": "Terms and Procrastination",
     "default_icon": {
       "16": "/images/react-logo-16.png",
