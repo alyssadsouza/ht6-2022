@@ -9,11 +9,6 @@ app = Flask(__name__)
 def home():
     return {"message": "This works"}
 
-@app.route('/api/users/<id>')
-def home(id):
-    user = collection.find_one({"_id":id})
-    return {"message": user}
-
 @app.route('/get-summary')
 def get_summary():
     ARTICLE = """
