@@ -9,6 +9,14 @@
   --red: #DD5555;
 }
 
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Source Code Pro', monospace;
+}
+
 .flex-col {
   display: flex;
   flex-direction: column;
@@ -43,4 +51,8 @@
 
 a, a:visited {
   color: var(--accent2);
+}
+
+.empty-msg {
+  padding: 1rem;
 }

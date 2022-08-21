@@ -6,9 +6,11 @@ function TermsAndConditions({ content }) {
   return (
     <div className="TermsAndConditions">
       {!content?.summary?.length ? (
-        <h3>
-          There doesn't seem to be any Terms of Service on this website...
-        </h3>
+        <div className="empty-msg">
+          <h3>
+            There doesn't seem to be any Terms of Service on this website...
+          </h3>
+        </div>
       ) : (
         <div className="terms flex-col">
           <div className="terms-container flex-row">

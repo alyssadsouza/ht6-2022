@@ -91,3 +91,9 @@
 .login b {
     color: var(--text);
 }
+
+.empty-list {
+    justify-content: center;
+    height: inherit;
+    text-align: center;
+}
