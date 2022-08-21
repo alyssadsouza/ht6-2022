@@ -90,6 +90,7 @@ function Summarize({userID}) {
   const [userData, setUserData] = useState({});
   const [privacy, setPrivacy] = useState("");
   const [terms, setTerms] = useState("");
+  const [websiteData, setWebsiteData] = useState({});
 
   useEffect(() => {
     getUser(userID, setUserData);
@@ -133,26 +134,34 @@ function Summarize({userID}) {
   useEffect(() => {
     if (privacy) {
       // make fetch call to api to get current website data
+      fetch("http://localhost:5000/get-summary?url=" + privacy).then((data) => data.json()).then((json_data) => {
+        console.log(json_data)
+        setWebsiteData(prev => ({...prev,
+          url: privacy,
+          privacy: {
+            url: privacy,
+            summary: json_data.summary
+          }
+        }))
+      })
     }
   }, [privacy]);
 
   useEffect(() => {
     if (terms) {
       // make fetch call to api to get current website data
+      fetch("http://localhost:5000/get-summary?url=" + terms).then((data) => data.json()).then((json_data) => {
+        console.log(json_data)
+        setWebsiteData(prev => ({...prev,
+          url: terms,
+          terms: {
+            url: terms,
+            summary: json_data.summary
+          }
+        }))
+      })
     }
   }, [terms]);
-
-  const websiteData = {
-    url: "",
-    privacy: {
-      url: "",
-      summary: ["text", "privacy", "data", "data", "data"],
-    },
-    terms: {
-      url: "",
-      summary: ["terms", "and", "conditions", "terms", "and", "conditions"],
-    },
-  };
 
   return (
     <div className="Summarize flex-col">

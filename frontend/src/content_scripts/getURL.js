@@ -18,7 +18,7 @@ export const getPrivacyURL = () => {
 
 export const getTermsURL = () => {
   // return getURL(['terms of service', 'terms', 'terms and conditions']);
-  const urls = ["terms of service", "terms", "terms and conditions"];
+  const urls = ["github's terms of service","terms of service", "terms", "terms and conditions"];
   const ans = Array.from(document.querySelectorAll("a")).find((link) => {
     return urls.includes(link.innerHTML.toLowerCase());
   });
