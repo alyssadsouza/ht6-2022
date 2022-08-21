@@ -1,11 +1,18 @@
 from flask import Flask
 from predict_api import getTheSummary
 
+from users import collection
+
 app = Flask(__name__)
 
 @app.route('/')
 def home():
     return {"message": "This works"}
+
+@app.route('/api/users/<id>')
+def home(id):
+    user = collection.find_one({"_id":id})
+    return {"message": user}
 
 @app.route('/get-summary')
 def get_summary():
@@ -311,10 +318,10 @@ Special Terms for International Users
         Termination of account. Please note that Grindr reserves the right, in its sole discretion, to terminate the account or access of any user of the app, who is the subject of repeated infringement notifications.
         Changes. Grindr will inform its users of any modifications to these Terms by posting them on the website. If You have registered with Grindr, we will describe the modifications to these Terms in an email and will send to the email address associated with Your account.
 """
-    summary = getTheSummary(ARTICLE)
-    summary = summary[0]
-    summary_lines = summary['summary_text'].split(".")
-    return {"summary" : summary_lines}
+    # summary = getTheSummary(ARTICLE)
+    # summary = summary[0]
+    # summary_lines = summary['summary_text'].split(".")
+    # return {"summary" : summary_lines}
 
 if __name__=='__main__':
     app.run(debug=True)

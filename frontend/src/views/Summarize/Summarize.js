@@ -13,8 +13,21 @@ function Summarize() {
   const [userData, setUserData] = useState({});
   const [privacy, setPrivacy] = useState('');
   const [terms, setTerms] = useState('');
+  const userID = 0;
 
-  useEffect(() => setUserData(userApi), []);
+  async function getUser() {
+    try {
+      const data = await fetch(`/api/users/${userID}`);
+      const userData = await data.json();
+      setUserData(userData);
+    } catch (err) {
+      console.debug("Error fetching user:", err);
+    }
+  }
+
+  useEffect(() => {
+    getUser();
+  }, []);
 
   useEffect(() => {
     // update userApi
@@ -76,11 +89,6 @@ function Summarize() {
       url: "",
       summary: ["terms", "and", "conditions", "terms", "and", "conditions"]
     }
-  };
-
-  const userApi = {
-    whitelisted: ["google", "twitter"],
-    blacklisted: ["meta", "facebook"],
   };
 
   return (
