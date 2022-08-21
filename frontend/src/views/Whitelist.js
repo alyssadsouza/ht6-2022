@@ -11,7 +11,9 @@ function Whitelist({userID}) {
   }, []);
 
   useEffect(() => {
-    setLinks(userData.whitelisted);
+    // var realData = userData.valueOf()
+    // console.log("userdata from whitelisted", userData)
+    setLinks(userData?.message?.whitelisted);
   }, [userData]);
   const website = localStorage.getItem('current_website');
   return (

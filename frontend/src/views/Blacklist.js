@@ -11,7 +11,7 @@ function Blacklist({userID}) {
   }, []);
 
   useEffect(() => {
-    setLinks(userData.blacklisted);
+    setLinks(userData?.message?.blacklisted);
   }, [userData]);
   const website = localStorage.getItem('current_website');
   return (

@@ -10,7 +10,7 @@ import { getPrivacyURL, getTermsURL } from "../../content_scripts/getURL";
 
 export async function getUser(userID, setUserData) {
   try {
-    const data = await fetch(`/api/users/${userID}`);
+    const data = await fetch(`http://localhost:5000/api/users/${userID}`);
     const userData = await data.json();
     setUserData(userData);
   } catch (err) {
@@ -19,7 +19,8 @@ export async function getUser(userID, setUserData) {
 }
 
 export async function pushWhitelist(userID, setUserData, url) {
-  return fetch(`/api/users/whitelist/${userID}`, {
+  console.log("whitelist called")
+  return fetch(`http://localhost:5000/api/users/whitelist/${userID}`, {
     method: "PUT",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify({ url }),
@@ -36,7 +37,7 @@ export async function pushWhitelist(userID, setUserData, url) {
 }
 
 export async function pullWhitelist(userID, setUserData, url) {
-  return fetch(`/api/users/whitelist/${userID}`, {
+  return fetch(`http://localhost:5000/api/users/whitelist/${userID}`, {
     method: "DELETE",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify({ url }),
@@ -53,7 +54,7 @@ export async function pullWhitelist(userID, setUserData, url) {
 }
 
 export async function pushBlacklist(userID, setUserData, url) {
-  return fetch(`/api/users/blacklist/${userID}`, {
+  return fetch(`http://localhost:5000/api/users/blacklist/${userID}`, {
     method: "PUT",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify({ url }),
@@ -70,7 +71,8 @@ export async function pushBlacklist(userID, setUserData, url) {
 }
 
 export async function pullBlacklist(userID, setUserData, url) {
-  return fetch(`/api/users/blacklist/${userID}`, {
+  console.log("whitelist called")
+  return fetch(`http://localhost:5000/api/users/blacklist/${userID}`, {
     method: "DELETE",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify({ url }),
@@ -162,6 +164,7 @@ function Summarize({userID}) {
       })
     }
   }, [terms]);
+  console.log(userData)
 
   return (
     <div className="Summarize flex-col">
