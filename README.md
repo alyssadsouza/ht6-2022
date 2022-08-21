@@ -1,4 +1,4 @@
-# Terms And Procastination
+# Terms And Procrastination
 
 ## What it does
 
