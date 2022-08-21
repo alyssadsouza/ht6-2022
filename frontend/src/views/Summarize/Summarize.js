@@ -168,7 +168,7 @@ function Summarize({userID}) {
       {alreadyVisited() && <AgreeMessage blacklisted={isBlacklisted()} />}
       <PrivacyPolicy content={websiteData?.privacy} />
       <TermsAndConditions content={websiteData?.terms} />
-      {!alreadyVisited() && (privacy || terms) (
+      {!alreadyVisited() && (
         <AgreePrompt
           userID={userID}
           setUserData={setUserData}

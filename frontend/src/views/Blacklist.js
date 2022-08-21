@@ -24,7 +24,7 @@ function Blacklist({userID}) {
         </b>
       </div>
       <div className="List SitesContainer">
-        {links.map(link => (
+        {links?.map(link => (
           <div className="List SiteNameContainer flex-row" key={link}>
           <a href={link}>{link}</a>
           <div className="List SiteNameContainerIcons flex-row">
