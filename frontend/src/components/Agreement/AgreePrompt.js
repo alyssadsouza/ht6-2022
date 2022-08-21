@@ -1,3 +1,5 @@
+import './AgreePrompt.css';
+
 function AgreePrompt({website, userData, setUserData}) {
   
   const blacklist = () => {
@@ -15,9 +17,9 @@ function AgreePrompt({website, userData, setUserData}) {
   return(
      <div className="AgreePrompt">
         <h3>Does this sound good to you?</h3>
-        <div className="flex-row">
-          <button onClick={blacklist} className="cancel-button">No, go back</button>
-          <button onClick={whitelist} className="cancel-button">Yup!</button>
+        <div className="agree-prompt flex-row">
+          <button onClick={blacklist} className="btn cancel-btn">No, go back</button>
+          <button onClick={whitelist} className="btn agree-btn">Yup!</button>
         </div>
      </div>
      );

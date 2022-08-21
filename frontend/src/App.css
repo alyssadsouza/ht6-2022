@@ -5,8 +5,8 @@
   --text: #F9F9F9;
   --accent1: #AA8DC0;
   --accent2: #4A8AD6;
-  --red: #F66D6D;
-  --green: #48D792;
+  --green: #83C72D;
+  --red: #DD5555;
 }
 
 .flex-col {
@@ -37,6 +37,6 @@
   max-height: 90%;
   overflow: hidden;
   padding: 1rem;
-  justify-content: end;
+  justify-content: space-between;
   border-radius: 5px 5px 0px 0px;
 }

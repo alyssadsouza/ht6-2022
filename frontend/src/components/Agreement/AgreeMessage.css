@@ -1,3 +1,31 @@
 .AgreeMessage {
     margin: 0.5rem 0;
 }
+
+.AgreeMessage h3 {
+    font-size: 1rem;
+}
+
+.msg {
+    text-align: center;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+}
+
+.agree-msg {
+    background: linear-gradient(rgb(170, 141, 192, 0.3) 0%, rgb(74, 138, 214, 0.3) 100%);
+}
+
+.disagree-msg {
+    background: rgb(221, 85, 85, 0.3);
+}
+
+.icon.cancel-icon {
+    color: var(--red);
+}
+
+.icon.agree-icon {
+    color: var(--green);
+}
