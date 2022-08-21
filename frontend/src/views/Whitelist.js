@@ -50,8 +50,8 @@ function Whitelist({userID}) {
                 stroke="currentColor"
                 strokeWidth={2}
                 onClick={() => {
-                  pullWhitelist(website);
-                  pushBlacklist(website);
+                  pullWhitelist(userID, setUserData, website);
+                  pushBlacklist(userID, setUserData, website);
                 }}
               >
                 <path
@@ -68,7 +68,7 @@ function Whitelist({userID}) {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 strokeWidth={3}
-                onClick={() => pullWhitelist(website)}
+                onClick={() => pullWhitelist(userID, setUserData, website)}
               >
                 <path
                   strokeLinecap="round"

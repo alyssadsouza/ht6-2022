@@ -18,7 +18,7 @@ export async function getUser(userID, setUserData) {
   }
 }
 
-export async function pushWhitelist(url) {
+export async function pushWhitelist(userID, setUserData, url) {
   return fetch(`/api/users/whitelist/${userID}`, {
     method: "PUT",
     headers: { "Content-type": "application/json" },
@@ -35,7 +35,7 @@ export async function pushWhitelist(url) {
     });
 }
 
-export async function pullWhitelist(url) {
+export async function pullWhitelist(userID, setUserData, url) {
   return fetch(`/api/users/whitelist/${userID}`, {
     method: "DELETE",
     headers: { "Content-type": "application/json" },
@@ -52,7 +52,7 @@ export async function pullWhitelist(url) {
     });
 }
 
-export async function pushBlacklist(url) {
+export async function pushBlacklist(userID, setUserData, url) {
   return fetch(`/api/users/blacklist/${userID}`, {
     method: "PUT",
     headers: { "Content-type": "application/json" },
@@ -69,7 +69,7 @@ export async function pushBlacklist(url) {
     });
 }
 
-export async function pullBlacklist(url) {
+export async function pullBlacklist(userID, setUserData, url) {
   return fetch(`/api/users/blacklist/${userID}`, {
     method: "DELETE",
     headers: { "Content-type": "application/json" },
@@ -170,6 +170,8 @@ function Summarize({userID}) {
       <TermsAndConditions content={websiteData?.terms} />
       {!alreadyVisited() && (privacy || terms) (
         <AgreePrompt
+          userID={userID}
+          setUserData={setUserData}
           website={localStorage.getItem('current_website')}
           pushWhitelist={pushWhitelist}
           pushBlacklist={pushBlacklist}
